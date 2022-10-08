@@ -1,0 +1,46 @@
+body {
+   font-family: sans-serif !important;
+}
+
+
+/* header */
+
+.navbar-nav>.active>a{
+    color: #318fb5;
+}
+
+.nav-item>a:hover{
+    color: #318fb5;
+}
+
+/* end of header */
+
+.line1, .line2, .line3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.change .line1{
+    transform: rotate(-45deg) translate(-5px , 6px);
+}
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform:rotate(45deg) translate(-5px -6px);
+}
+
+.nav-button:focus {
+    border-radius: none !important;
+}
+
+.menu-item {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #eee;
+    font-weight: lighter;
+    transition: color .5s;
+}

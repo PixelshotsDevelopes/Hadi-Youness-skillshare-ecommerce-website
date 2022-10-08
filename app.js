@@ -4,17 +4,18 @@ const ejs = require('ejs');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const path = require("path");
+const { stat } = require('fs');
 const port = 3000;
 const app = express();
 
 // //setting staticPath and template and partials path using path code module
-const staticPath = path.join(__dirname, "../public") //need to change later
+const staticPath = path.join(__dirname, "public") //need to change later
 const templePath = path.join(__dirname,"views");
 const partialPath = path.join(__dirname,"views/partials")
-
+console.log(staticPath)
 // //MIDDLE_WARE
 // //using static files using express.static
-// app.use(express.static(staticPath));
+app.use(express.static(staticPath));
 
 // //setting up view engine as ejs
 app.set("view engine", "ejs");
